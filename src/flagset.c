@@ -143,19 +143,8 @@ int netcat_flag_count(void)
   for (i = 0; i < flagset_len; i++) {
     c = flagset[i];		/* if c is 0, all these 8 bits are FALSE */
     while (c) {
-      /* FIXME Ok, here it comes the big trouble. We are in the following
-	 situation:
-		ret = 0
-		c   = 1234 5678
-
-	We will loop and shift bits away until the number `c' becomes 0 (and
-	it will of course become 0, soon or late).
-
-	Assumed that the bit number 1 is the sign, and that we will shift the
-	bit 1 (or the bit that takes its place later) until the the most right,
-	WHY it has to keep the wrong sign? */
-      ret -= (c >> 7);
-      c <<= 1;
+      c &= c-1;
+      ret++;
     }
   }
 
