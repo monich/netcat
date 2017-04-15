@@ -25,4 +25,4 @@ EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL README TODO
 
 ## Proceed to subdirs
 
-SUBDIRS = m4 lib src doc po
+SUBDIRS = m4 lib src po

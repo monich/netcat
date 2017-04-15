@@ -169,7 +169,7 @@ dnl *********************************************************************
 dnl add here all the Makefiles.  These will be created by configure.
 dnl
 AC_CONFIG_FILES(Makefile m4/Makefile lib/Makefile lib/contrib/Makefile
-	src/Makefile doc/Makefile doc/drafts/Makefile po/Makefile.in)
+	src/Makefile po/Makefile.in)
 
 dnl this one is special, it needs the executable flag
 dnl
